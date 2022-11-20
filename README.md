@@ -64,4 +64,4 @@ otus2  compressratio         1.62x                  -
 otus3  compressratio         2.64x                  -
 otus4  compressratio         1.01x                  -
 ```
-
+Вывод. Таким образом, мы увидели, что наилучшей степенью сжатия обладает алгоритм gzip-9 : 2.64x
