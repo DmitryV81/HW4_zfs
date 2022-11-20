@@ -31,4 +31,10 @@ otus2   480M  91.5K   480M        -         -     0%     0%  1.00x    ONLINE  -
 otus3   480M  91.5K   480M        -         -     0%     0%  1.00x    ONLINE  -
 otus4   480M  91.5K   480M        -         -     0%     0%  1.00x    ONLINE  -
 ```
-
+4. Добавим в каждую файловую систему алгоритм сжатия:
+```
+zfs set compression=lzjb otus1
+zfs set compression=lz4 otus2
+zfs set compression=gzip-9 otus3
+zfs set compression=zle otus4
+```
