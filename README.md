@@ -1,5 +1,6 @@
 
-```lsblk
+1.  С помощью команды lsblk смотрим список всех дисков, что есть в виртуальной машине:
+```
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda      8:0    0   40G  0 disk 
 `-sda1   8:1    0   40G  0 part /
