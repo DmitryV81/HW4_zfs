@@ -219,6 +219,7 @@ otus  feature@resilver_defer         enabled                        local
 otus  feature@bookmark_v2            enabled                        local
 ```
 5. Выводим информацию по отдельным параметрам пула:
+
   а. Размер пула:
 ```
 [root@zfs ~]# zfs get available otus
