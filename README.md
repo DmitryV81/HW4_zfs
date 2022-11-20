@@ -251,3 +251,20 @@ otus  compression  zle       local
 NAME  PROPERTY  VALUE      SOURCE
 otus  checksum  sha256     local
 ```
+
+III Приступаем к третьей части задания: восстановление пула из снапшота, найти сообщение в восстановленном файле.
+1. Скачиваем файл снапшота: wget -O otus_task2.file --no-check-certificate 'https://drive.google.com/u/0/uc?id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG&export=download'
+2. Восстанавливаем файловую систему из снапшота:
+```
+[root@zfs ~]# zfs receive otus/test@today < otus_task2.file
+```
+3. Находим в каталоге /otus/test/ файл с именем secret_message:
+```
+[root@zfs ~]# find /otus/test -name "secret_message"
+/otus/test/task1/file_mess/secret_message
+```
+4. Открываем файл и находим секретное сообщение:
+```
+[root@zfs ~]# cat /otus/test/task1/file_mess/secret_message
+https://github.com/sindresorhus/awesome
+```
